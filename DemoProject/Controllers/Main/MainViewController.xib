@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,11 +14,82 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="BaseView" customModule="DemoProject" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scL-Kd-8PG" customClass="BaseView" customModule="DemoProject" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5A0-ou-hZ7">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hz-RE-wAm" customClass="BaseView" customModule="DemoProject" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="euA-sY-lME" customClass="BaseCollectionView" customModule="DemoProject" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Rio-uX-KOX">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="euA-sY-lME" secondAttribute="trailing" id="31g-Vh-3BD"/>
+                                        <constraint firstItem="euA-sY-lME" firstAttribute="leading" secondItem="6hz-RE-wAm" secondAttribute="leading" id="kAo-DX-5JU"/>
+                                        <constraint firstItem="euA-sY-lME" firstAttribute="top" secondItem="6hz-RE-wAm" secondAttribute="top" id="sY6-2h-TbO"/>
+                                        <constraint firstAttribute="bottom" secondItem="euA-sY-lME" secondAttribute="bottom" id="t0X-iA-lMT"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6A7-kB-IHr" customClass="BaseView" customModule="DemoProject" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="224" width="414" height="672"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="P2Z-Mj-R4G" customClass="BaseCollectionView" customModule="DemoProject" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hw1-kF-PIE">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="P2Z-Mj-R4G" secondAttribute="trailing" id="AT3-fl-YJ9"/>
+                                        <constraint firstItem="P2Z-Mj-R4G" firstAttribute="top" secondItem="6A7-kB-IHr" secondAttribute="top" id="PDC-LG-bW5"/>
+                                        <constraint firstItem="P2Z-Mj-R4G" firstAttribute="leading" secondItem="6A7-kB-IHr" secondAttribute="leading" id="vXc-9D-pMN"/>
+                                        <constraint firstAttribute="bottom" secondItem="P2Z-Mj-R4G" secondAttribute="bottom" id="vnx-Iw-PpU"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5A0-ou-hZ7" firstAttribute="top" secondItem="scL-Kd-8PG" secondAttribute="top" id="BHr-R5-YKf"/>
+                        <constraint firstAttribute="trailing" secondItem="5A0-ou-hZ7" secondAttribute="trailing" id="KkT-aK-qng"/>
+                        <constraint firstAttribute="bottom" secondItem="5A0-ou-hZ7" secondAttribute="bottom" id="XX2-a7-27c"/>
+                        <constraint firstItem="5A0-ou-hZ7" firstAttribute="leading" secondItem="scL-Kd-8PG" secondAttribute="leading" id="x4f-ZF-0z5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="scL-Kd-8PG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1gc-eO-pkn"/>
+                <constraint firstItem="scL-Kd-8PG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="J7M-mT-eEg"/>
+                <constraint firstAttribute="trailing" secondItem="scL-Kd-8PG" secondAttribute="trailing" id="kpV-sb-zsm"/>
+                <constraint firstItem="6hz-RE-wAm" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1:4" id="np7-cO-GH3"/>
+                <constraint firstAttribute="bottom" secondItem="scL-Kd-8PG" secondAttribute="bottom" id="r1Y-Ok-v3S"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-10" y="54"/>
         </view>

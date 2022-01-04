@@ -34,6 +34,10 @@
 		CC6AEBA22784CD25007D021A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6AEBA12784CD25007D021A /* Router.swift */; };
 		CC6AEBA62784D4F4007D021A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6AEBA42784D4F4007D021A /* MainViewController.swift */; };
 		CC6AEBA72784D4F4007D021A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6AEBA52784D4F4007D021A /* MainViewController.xib */; };
+		CC6AEBAA2784E2CB007D021A /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6AEBA92784E2CB007D021A /* BaseCollectionView.swift */; };
+		CC6AEBAD2784E2DD007D021A /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6AEBAB2784E2DD007D021A /* ListCollectionViewCell.swift */; };
+		CC6AEBAE2784E2DD007D021A /* ListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6AEBAC2784E2DD007D021A /* ListCollectionViewCell.xib */; };
+		CC6AEBB02784E4C3007D021A /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6AEBAF2784E4C3007D021A /* BaseCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,10 @@
 		CC6AEBA12784CD25007D021A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CC6AEBA42784D4F4007D021A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CC6AEBA52784D4F4007D021A /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		CC6AEBA92784E2CB007D021A /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		CC6AEBAB2784E2DD007D021A /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC6AEBAC2784E2DD007D021A /* ListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCollectionViewCell.xib; sourceTree = "<group>"; };
+		CC6AEBAF2784E4C3007D021A /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +232,7 @@
 		CC6AEB792784AB79007D021A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CC6AEBA82784E29E007D021A /* ListCollectionCell */,
 				CC6AEB7A2784AB79007D021A /* Base */,
 			);
 			path = Views;
@@ -235,6 +244,8 @@
 				CC6AEB7B2784AB79007D021A /* BaseLabel.swift */,
 				CC6AEB7C2784AB79007D021A /* BaseView.swift */,
 				CC6AEB7D2784AB79007D021A /* BaseButton.swift */,
+				CC6AEBA92784E2CB007D021A /* BaseCollectionView.swift */,
+				CC6AEBAF2784E4C3007D021A /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -296,6 +307,15 @@
 				CC6AEBA12784CD25007D021A /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		CC6AEBA82784E29E007D021A /* ListCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC6AEBAB2784E2DD007D021A /* ListCollectionViewCell.swift */,
+				CC6AEBAC2784E2DD007D021A /* ListCollectionViewCell.xib */,
+			);
+			path = ListCollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +424,7 @@
 			files = (
 				CC6AEB962784ACB7007D021A /* Localization.strings in Resources */,
 				CC6AEBA72784D4F4007D021A /* MainViewController.xib in Resources */,
+				CC6AEBAE2784E2DD007D021A /* ListCollectionViewCell.xib in Resources */,
 				CC6AEB3B2784AB0B007D021A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,9 +465,12 @@
 				CC6AEB9B2784CBA0007D021A /* BaseNavigationViewController.swift in Sources */,
 				CC6AEB782784AB71007D021A /* BaseViewModel.swift in Sources */,
 				CC6AEB922784AB84007D021A /* Colors.swift in Sources */,
+				CC6AEBB02784E4C3007D021A /* BaseCollectionViewCell.swift in Sources */,
 				CC6AEB682784AB5F007D021A /* Service.swift in Sources */,
 				CC6AEB702784AB6D007D021A /* BaseViewController.swift in Sources */,
 				CC6AEB842784AB7F007D021A /* ViewExtensions.swift in Sources */,
+				CC6AEBAD2784E2DD007D021A /* ListCollectionViewCell.swift in Sources */,
+				CC6AEBAA2784E2CB007D021A /* BaseCollectionView.swift in Sources */,
 				CC6AEB632784AB4D007D021A /* SeriesModel.swift in Sources */,
 				CC6AEB7F2784AB7A007D021A /* BaseView.swift in Sources */,
 				CC6AEB772784AB71007D021A /* ListViewModel.swift in Sources */,

@@ -5,9 +5,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct AppConstants {
-
+    struct Shapes {
+        static let betweenItems: CGFloat = 10.0
+        static let cornerRadius: CGFloat = 10.0
+        static let borderWidth: CGFloat = 1.0
+    }
 }
 
 enum NibName: String {
