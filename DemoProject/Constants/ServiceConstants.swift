@@ -8,7 +8,7 @@ import Foundation
 
 struct ServiceConstants {
     struct Url {
-        static let series = "https://jsonblob.com/api/jsonblob/887822236724248576"
+        static let cartList = "https://s3-eu-west-1.amazonaws.com/developer-application-test/cart/list"
     }
     
     struct Config {

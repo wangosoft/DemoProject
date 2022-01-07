@@ -12,7 +12,7 @@ struct Localize {
     }
 
     struct Main {
-        static let title = NSLocalizedString("Series", comment: "Main")
+        static let title = NSLocalizedString("List", comment: "Main")
     }
     
     struct Error {

@@ -7,6 +7,7 @@
 import Foundation
 
 class BaseViewModel {
+    var showError: ((NetworkError?)->())?
     let service: ServiceProtocol
     
     init(service: ServiceProtocol = Service.shared) {
