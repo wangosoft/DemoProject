@@ -7,14 +7,16 @@
 import Foundation
 
 class ListViewModel: BaseViewModel {
-    var loadSeries: (([SeriesModel])->())?
+    var loadList: (([CartListModel])->())?
     
-    func getSeries() {
-        Service.shared.getSeries { response, error in
-            if let series = response?.series {
-                self.loadSeries?(series)
-            } else {
-                self.showError?(error)
+    func getList() {
+        Service.shared.getList { [weak self] response, error in
+            DispatchQueue.main.async {
+                if let cartList = response?.products {
+                    self?.loadList?(cartList)
+                } else {
+                    self?.showError?(error)
+                }
             }
         }
     }

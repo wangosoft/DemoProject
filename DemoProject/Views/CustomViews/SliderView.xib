@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderView" customModule="DemoProject" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="QY4-1p-dFx" id="3Vz-Xk-e5K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PxO-ao-AoJ" customClass="BaseView" customModule="DemoProject" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="QY4-1p-dFx" customClass="BaseCollectionView" customModule="DemoProject" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Urp-TB-jbm">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="eUe-PH-A0H"/>
+                                <outlet property="delegate" destination="-1" id="aZm-73-bU7"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="QY4-1p-dFx" firstAttribute="leading" secondItem="PxO-ao-AoJ" secondAttribute="leading" id="NMD-bc-hMK"/>
+                        <constraint firstItem="QY4-1p-dFx" firstAttribute="top" secondItem="PxO-ao-AoJ" secondAttribute="top" id="Oou-cq-mgA"/>
+                        <constraint firstAttribute="bottom" secondItem="QY4-1p-dFx" secondAttribute="bottom" id="UBD-Eo-n89"/>
+                        <constraint firstAttribute="trailing" secondItem="QY4-1p-dFx" secondAttribute="trailing" id="klj-GH-xe4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="PxO-ao-AoJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Hr-kk-d1i"/>
+                <constraint firstItem="PxO-ao-AoJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DKw-Gf-U1i"/>
+                <constraint firstAttribute="bottom" secondItem="PxO-ao-AoJ" secondAttribute="bottom" id="Fqk-Yr-yWG"/>
+                <constraint firstAttribute="trailing" secondItem="PxO-ao-AoJ" secondAttribute="trailing" id="ipS-ru-tU0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="119"/>
+        </view>
+    </objects>
+</document>

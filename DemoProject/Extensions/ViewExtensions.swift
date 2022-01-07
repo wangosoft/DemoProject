@@ -45,3 +45,19 @@ extension UIView {
     }
 }
 
+extension UIImageView {
+    
+    func imageFromUrl(_ url: String?) {
+        if let url = url, !url.isEmpty {
+            let serviceApi : ServiceProtocol = Service()
+            serviceApi.loadImage(urlString: url) { image in
+                if let img = image {
+                    DispatchQueue.main.async {
+                        self.image = img
+                    }
+                }
+            }
+        }
+    }
+    
+}

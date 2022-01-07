@@ -18,4 +18,6 @@ struct AppConstants {
 enum NibName: String {
     case main = "MainViewController"
     case detail = "DetailViewController"
+    case sliderView = "SliderView"
+    case sliderCollectionViewCell = "SliderCollectionViewCell"
 }

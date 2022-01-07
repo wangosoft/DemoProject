@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: BaseViewController {
     
+    @IBOutlet weak var sliderView: SliderView!
+
     lazy var listViewModel: ListViewModel = {
         return ListViewModel()
     }()
@@ -16,6 +18,7 @@ class MainViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
+        initVM()
     }
     
     private func initUI() {
@@ -23,10 +26,10 @@ class MainViewController: BaseViewController {
     }
     
     private func initVM() {
-        listViewModel.getSeries()
+        listViewModel.getList()
         
-        listViewModel.loadSeries = { [weak self] series in
-            
+        listViewModel.loadList = { [weak self] list in
+            self?.sliderView.setup(list: list)
         }
         
         listViewModel.showError = { [weak self] error in
@@ -34,4 +37,16 @@ class MainViewController: BaseViewController {
         }
     }
 
+}
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
+    
 }
